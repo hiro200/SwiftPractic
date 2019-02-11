@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wG7-S4-S1J">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ImageViewer-->
+        <scene sceneID="G5A-H0-3hv">
+            <objects>
+                <collectionViewController storyboardIdentifier="ImageViewer" title="ImageViewer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wG7-S4-S1J" customClass="ImageViewController" customModule="SwiftPractic" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ImageViewer" alwaysBounceHorizontal="YES" pagingEnabled="YES" dataMode="prototypes" springLoaded="YES" id="w8n-D5-8UU" customClass="ImageViewer" customModule="SwiftPractic" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aoS-eE-7kb">
+                            <size key="itemSize" width="375" height="667"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="EjE-wX-t2Y" customClass="ScrollingImageCell" customModule="SwiftPractic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2VZ-Yb-bSi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="2VZ-Yb-bSi" firstAttribute="leading" secondItem="EjE-wX-t2Y" secondAttribute="leading" id="NaM-dm-Ggd"/>
+                                    <constraint firstAttribute="trailing" secondItem="2VZ-Yb-bSi" secondAttribute="trailing" id="cWT-WY-gjj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2VZ-Yb-bSi" secondAttribute="bottom" id="doe-FJ-4bE"/>
+                                    <constraint firstItem="2VZ-Yb-bSi" firstAttribute="top" secondItem="EjE-wX-t2Y" secondAttribute="top" id="ps8-Jp-xzY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="2VZ-Yb-bSi" id="CmX-cl-KGM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="wG7-S4-S1J" id="MHs-EK-pLQ"/>
+                            <outlet property="delegate" destination="wG7-S4-S1J" id="7bt-Xt-cF2"/>
+                        </connections>
+                    </collectionView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="collectionView" destination="w8n-D5-8UU" id="q7T-Pw-2R8"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yL-JX-w9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="-156.97151424287858"/>
+        </scene>
+    </scenes>
+</document>
