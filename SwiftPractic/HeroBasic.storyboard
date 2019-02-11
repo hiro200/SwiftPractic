@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IJm-Gh-5yS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero Controller-->
+        <scene sceneID="rZb-qv-TO1">
+            <objects>
+                <viewController title="Hero Controller" id="IJm-Gh-5yS" customClass="HeroController" customModule="SwiftPractic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7U-ro-3in">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcQ-bs-v20" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="16" y="188" width="80" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ecc-mg-BG5"/>
+                                    <constraint firstAttribute="height" constant="64" id="MAo-zJ-bTU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-HF-iy2">
+                                <rect key="frame" x="120" y="188" width="80" height="68"/>
+                                <color key="backgroundColor" red="0.56465393304824829" green="0.45339596271514893" blue="0.35711643099784851" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Brown"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i15-iL-chA">
+                                <rect key="frame" x="231" y="188" width="73" height="68"/>
+                                <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-ps-JD6">
+                                <rect key="frame" x="129" y="322" width="63" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Next"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Next"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="nE9-cs-A4c" kind="show" id="9n0-WV-6L1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJJ-n6-Tgl">
+                                <rect key="frame" x="144" y="69" width="32" height="42"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="Click:" destination="IJm-Gh-5yS" eventType="touchUpInside" id="oZH-Pq-vIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ol2-HF-iy2" firstAttribute="top" secondItem="nJJ-n6-Tgl" secondAttribute="bottom" constant="77" id="4ge-Ru-5e0"/>
+                            <constraint firstItem="tcQ-bs-v20" firstAttribute="top" secondItem="Ol2-HF-iy2" secondAttribute="top" id="8hI-am-52Q"/>
+                            <constraint firstItem="fEc-lW-xlW" firstAttribute="trailing" secondItem="EpC-ps-JD6" secondAttribute="trailing" constant="128" id="DKf-J6-Fq4"/>
+                            <constraint firstItem="nJJ-n6-Tgl" firstAttribute="top" secondItem="fEc-lW-xlW" secondAttribute="top" constant="69" id="NwY-8U-1fR"/>
+                            <constraint firstItem="nJJ-n6-Tgl" firstAttribute="leading" secondItem="fEc-lW-xlW" secondAttribute="leading" constant="144" id="UPQ-hK-zMl"/>
+                            <constraint firstItem="i15-iL-chA" firstAttribute="leading" secondItem="Ol2-HF-iy2" secondAttribute="trailing" constant="31" id="fbh-R7-Zyd"/>
+                            <constraint firstItem="i15-iL-chA" firstAttribute="bottom" secondItem="Ol2-HF-iy2" secondAttribute="bottom" id="hZB-8i-OmA"/>
+                            <constraint firstItem="tcQ-bs-v20" firstAttribute="baseline" secondItem="Ol2-HF-iy2" secondAttribute="firstBaseline" constant="-2" id="jdE-fj-hek"/>
+                            <constraint firstItem="EpC-ps-JD6" firstAttribute="top" secondItem="Ol2-HF-iy2" secondAttribute="bottom" constant="66" id="l4S-Nu-MxY"/>
+                            <constraint firstItem="EpC-ps-JD6" firstAttribute="leading" secondItem="fEc-lW-xlW" secondAttribute="leading" constant="129" id="lFd-8r-NEE"/>
+                            <constraint firstItem="Ol2-HF-iy2" firstAttribute="width" secondItem="tcQ-bs-v20" secondAttribute="width" id="ocR-Ug-s6K"/>
+                            <constraint firstItem="Ol2-HF-iy2" firstAttribute="centerX" secondItem="c7U-ro-3in" secondAttribute="centerX" id="sA1-CH-9R8"/>
+                            <constraint firstItem="i15-iL-chA" firstAttribute="trailing" secondItem="c7U-ro-3in" secondAttribute="trailingMargin" id="sF1-p5-xlx"/>
+                            <constraint firstItem="tcQ-bs-v20" firstAttribute="baseline" secondItem="i15-iL-chA" secondAttribute="baseline" constant="-2" id="teG-bc-hws"/>
+                            <constraint firstItem="tcQ-bs-v20" firstAttribute="leading" secondItem="fEc-lW-xlW" secondAttribute="leading" constant="16" id="vs0-jd-r3x"/>
+                            <constraint firstItem="nJJ-n6-Tgl" firstAttribute="centerX" secondItem="Ol2-HF-iy2" secondAttribute="centerX" id="ySO-OP-d2k"/>
+                            <constraint firstItem="Ol2-HF-iy2" firstAttribute="centerY" secondItem="c7U-ro-3in" secondAttribute="centerY" constant="2" id="ydw-M8-fWo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEc-lW-xlW"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="440"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="gotoStory" destination="nJJ-n6-Tgl" id="DuZ-oA-tYp"/>
+                        <outlet property="view" destination="c7U-ro-3in" id="yxD-e6-yvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7V5-E7-Bo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="161.91904047976013"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p0c-IS-AGa">
+            <objects>
+                <viewController title="View Controller" id="nE9-cs-A4c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N9s-td-EpX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoe-E6-wD9">
+                                <rect key="frame" x="110" y="97" width="100" height="60"/>
+                                <color key="backgroundColor" red="0.15410047769546509" green="0.41306763887405396" blue="0.69063264131546021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ea3-rl-0LB"/>
+                                    <constraint firstAttribute="height" constant="60" id="h4s-Ik-Jl2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-0O-tGr">
+                                <rect key="frame" x="110" y="300" width="100" height="60"/>
+                                <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="WUZ-o7-1wd"/>
+                                    <constraint firstAttribute="width" constant="100" id="cfo-GT-Dba"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXx-jn-W9p">
+                                <rect key="frame" x="136" y="380" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Next"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hero_dismissViewController" destination="UMT-aX-reR" eventType="touchUpInside" id="dJf-LM-FSq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-ub-xDB">
+                                <rect key="frame" x="110" y="190" width="100" height="60"/>
+                                <color key="backgroundColor" red="0.47660902142524719" green="0.37373736500740051" blue="0.28653344511985779" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="3io-Cf-wdi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9x7-kT-uO7"/>
+                                    <constraint firstAttribute="width" constant="100" id="fIy-s5-fIl"/>
+                                    <constraint firstAttribute="height" constant="60" id="lOl-m7-hy7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="Brown"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="arc"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qoe-E6-wD9" firstAttribute="top" secondItem="rld-Od-ojb" secondAttribute="top" constant="97" id="1Wf-aQ-0Wa"/>
+                            <constraint firstItem="Qoe-E6-wD9" firstAttribute="leading" secondItem="sUb-0O-tGr" secondAttribute="leading" id="IuI-AO-aoZ"/>
+                            <constraint firstItem="rld-Od-ojb" firstAttribute="trailing" secondItem="pXx-jn-W9p" secondAttribute="trailing" constant="138" id="LEe-ua-onl"/>
+                            <constraint firstItem="aPs-ub-xDB" firstAttribute="top" secondItem="Qoe-E6-wD9" secondAttribute="bottom" constant="33" id="Xuo-7Q-7mU"/>
+                            <constraint firstItem="Qoe-E6-wD9" firstAttribute="top" secondItem="rld-Od-ojb" secondAttribute="top" constant="97" id="cPn-AM-okI"/>
+                            <constraint firstItem="aPs-ub-xDB" firstAttribute="top" secondItem="Qoe-E6-wD9" secondAttribute="bottom" constant="33" id="eYa-y0-LOD"/>
+                            <constraint firstItem="pXx-jn-W9p" firstAttribute="leading" secondItem="rld-Od-ojb" secondAttribute="leading" constant="136" id="kPj-Mj-Vc1"/>
+                            <constraint firstItem="Qoe-E6-wD9" firstAttribute="centerX" secondItem="N9s-td-EpX" secondAttribute="centerX" id="mc4-r6-D0F"/>
+                            <constraint firstItem="Qoe-E6-wD9" firstAttribute="leading" secondItem="aPs-ub-xDB" secondAttribute="leading" id="qA2-Cf-ZZh"/>
+                            <constraint firstItem="pXx-jn-W9p" firstAttribute="top" secondItem="sUb-0O-tGr" secondAttribute="bottom" constant="20" id="tcu-nN-iBl"/>
+                            <constraint firstItem="sUb-0O-tGr" firstAttribute="top" secondItem="aPs-ub-xDB" secondAttribute="bottom" constant="50" id="xax-7C-2x3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rld-Od-ojb"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="440"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0,100) fade"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMT-aX-reR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="161.91904047976013"/>
+        </scene>
+    </scenes>
+</document>
