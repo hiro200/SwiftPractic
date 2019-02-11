@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p20-It-UBj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Match Controller-->
+        <scene sceneID="96w-KN-jdw">
+            <objects>
+                <viewController id="p20-It-UBj" customClass="MatchController" customModule="SwiftPractic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="siX-Yg-CIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muC-rf-7YH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="ARS-Gc-9qd">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="jWH-Uz-WVC" customClass="CellView" customModule="SwiftPractic" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="55" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gis-L1-JpQ">
+                                                    <rect key="frame" x="5" y="0.0" width="110" height="102"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QH-GG-Fp9" userLabel="Name">
+                                                    <rect key="frame" x="0.0" y="99.5" width="120" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gis-L1-JpQ" secondAttribute="bottom" constant="10" id="4g4-51-KDZ"/>
+                                            <constraint firstItem="9QH-GG-Fp9" firstAttribute="leading" secondItem="jWH-Uz-WVC" secondAttribute="leading" id="4qs-5i-8yY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gis-L1-JpQ" secondAttribute="trailing" constant="5" id="AR5-kY-NcP"/>
+                                            <constraint firstItem="gis-L1-JpQ" firstAttribute="leading" secondItem="jWH-Uz-WVC" secondAttribute="leading" constant="5" id="OsX-F5-Toz"/>
+                                            <constraint firstItem="gis-L1-JpQ" firstAttribute="top" secondItem="jWH-Uz-WVC" secondAttribute="top" id="XeC-YV-nvm"/>
+                                            <constraint firstAttribute="bottom" secondItem="9QH-GG-Fp9" secondAttribute="bottom" id="aWX-uJ-qvm"/>
+                                            <constraint firstItem="9QH-GG-Fp9" firstAttribute="centerX" secondItem="gis-L1-JpQ" secondAttribute="centerX" id="blr-Qz-1c3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="gis-L1-JpQ" id="xso-fz-0mN"/>
+                                            <outlet property="nameLabel" destination="9QH-GG-Fp9" id="Xjz-tf-lgs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q0U-Uq-Qkj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="p20-It-UBj" id="YzA-EL-mfD"/>
+                                    <outlet property="delegate" destination="p20-It-UBj" id="L3t-E0-JVb"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="muC-rf-7YH" firstAttribute="leading" secondItem="k5y-y3-JVo" secondAttribute="leading" id="DfH-QG-TGr"/>
+                            <constraint firstItem="muC-rf-7YH" firstAttribute="trailing" secondItem="k5y-y3-JVo" secondAttribute="trailing" id="PfK-JJ-3g9"/>
+                            <constraint firstItem="muC-rf-7YH" firstAttribute="top" secondItem="siX-Yg-CIB" secondAttribute="top" id="hmX-6c-QzB"/>
+                            <constraint firstItem="muC-rf-7YH" firstAttribute="bottom" secondItem="k5y-y3-JVo" secondAttribute="bottom" id="kmk-nL-SPu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k5y-y3-JVo"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="muC-rf-7YH" id="GDI-QS-IUS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61V-DE-Mo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="-242"/>
+        </scene>
+    </scenes>
+</document>
